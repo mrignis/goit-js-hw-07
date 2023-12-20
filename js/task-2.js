@@ -1,4 +1,4 @@
-const gallery = document.querySelector('.gallery');
+
 
 const images = [
   {
@@ -27,13 +27,19 @@ const images = [
   },
 ];
 
-images.forEach(image => {
-  const li = document.createElement('li');
-  const img = document.createElement('img');
 
+const galleryContainer = document.getElementById('gallery');
+
+const galleryItems = images.map(image => {
+  const li = document.createElement('li');
+  li.classList.add('gallery-item');
+
+  const img = document.createElement('img');
   img.src = image.url;
   img.alt = image.alt;
 
   li.appendChild(img);
-  gallery.appendChild(li);
+  return li;
 });
+
+galleryContainer.append(...galleryItems);

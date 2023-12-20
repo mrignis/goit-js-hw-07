@@ -26,3 +26,14 @@ img {
     width: 250px;
     height: 250px;
 }
+
+#boxes {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+}
